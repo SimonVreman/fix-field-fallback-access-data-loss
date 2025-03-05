@@ -119,7 +119,7 @@ export interface UserAuthOperations {
 export interface User {
   id: number;
   'breaks-on-update': string;
-  'wipes-on-update'?: string | null;
+  'dataloss-on-update'?: string | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -213,7 +213,7 @@ export interface PayloadMigration {
  */
 export interface UsersSelect<T extends boolean = true> {
   'breaks-on-update'?: T;
-  'wipes-on-update'?: T;
+  'dataloss-on-update'?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;

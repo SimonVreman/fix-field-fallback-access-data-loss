@@ -15,5 +15,11 @@ export const Users: CollectionConfig = {
       required: true,
       access: { update: () => false },
     },
+    {
+      name: 'dataloss-on-update',
+      type: 'text',
+      hooks: { beforeChange: [({ value }) => value ?? ''] },
+      access: { update: () => false },
+    },
   ],
 }
